@@ -121,7 +121,7 @@
                 Didn't receive a code? (37s)
                 <a href="#">Resend</a>
             </p>
-            <a href="./dashboard.html" class="continue-btn" onclick="verifyOTP()" >Continue</a>
+            <a href="./main.html" class="continue-btn" onclick="verifyOTP()" >Continue</a>
         </div>
     </div>
     <!-- Verify OTP Section -- End -->
@@ -129,7 +129,7 @@
         const loginPage = document.getElementById("loginPage");
         const registerPage = document.getElementById("registerPage");
         const otpPage = document.getElementById("otpPage");
-        const dashboardPage = document.getElementById("dashboardPage");
+        const mainPage = document.getElementById("mainPage");
 
         /* Show Pages */
         function showLogin() {
@@ -160,7 +160,7 @@
         /* OTP Verify */
         function verifyOTP() {
             otpPage.style.display = "none";
-            dashboardPage.style.display = "block";
+            mainPage.style.display = "block";
         }
     </script>
 
