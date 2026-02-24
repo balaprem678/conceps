@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/product.css">
+
+</head>
+
+<body>
+
+    <!-- TOP SEARCH BAR -->
+    <div class="topbar">
+        <div class="search-wrap">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search products..." value="Nike"
+                oninput="filterProducts()">
+            <span class="shortcut">⌘ K</span>
+        </div>
+        <button class="filter-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+            </svg>
+            <span>Filter</span>
+        </button>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filterbar">
+        <div class="results-text" id="resultsText">1 – 12 over 280 results for <strong>Nike</strong></div>
+        <div class="filter-group">
+            <select class="select-filter" onchange="sortProducts(this.value)">
+                <option value="high">Price High to Low</option>
+                <option value="low">Price Low to High</option>
+                <option value="name">Name A-Z</option>
+            </select>
+        </div>
+        <div class="time-filters">
+            <button class="time-btn">Week</button>
+            <button class="time-btn active">Today</button>
+            <button class="time-btn">Month</button>
+            <button class="time-btn">All</button>
+        </div>
+        <div class="view-btns">
+            <button class="view-btn active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                    <rect x="14" y="3" width="7" height="7" rx="1" />
+                    <rect x="3" y="14" width="7" height="7" rx="1" />
+                    <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+            </button>
+            <button class="view-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main">
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottombar">
+        <div class="per-page">
+            Show
+            <select id="perPageSelect" onchange="changePerPage(this.value)">
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+            </select>
+            Per page
+        </div>
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+
+    <div class="product-overlay" id="productOverlay"></div>
+
+    <div class="product-drawer" id="productDrawer">
+        <div class="product_details_side">
+            <h4>Product Details</h4>
+            <button class="drawer-close" onclick="closeDrawer()">✕</button>
+        </div>
+
+        <div id="drawerContent"></div>
+    </div>
+    <script src="./js/products.js"></script>
+</body>
+
+</html>

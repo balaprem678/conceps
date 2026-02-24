@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: #fff;
+    padding: clamp(20px, 4vw, 35px);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .signup-text {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #666;
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    }
+}
+
+/* Social Buttons */
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    button {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: #fff;
+        cursor: pointer;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        img {
+            width: 18px;
+        }
+
+        &:hover {
+            background: #f9fafb;
+        }
+    }
+}
+
+.divider {
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+
+    span {
+        background: #fff;
+        padding: 0 10px;
+        color: #888;
+        font-size: 14px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #e5e7eb;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+form {
+    label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        outline: none;
+
+        &:focus {
+            border-color: #2563eb;
+        }
+    }
+}
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        font-size: 13px;
+        color: #2563eb;
+        text-decoration: none;
+    }
+}
+
+.password-field {
+    position: relative;
+
+    .eye {
+        position: absolute;
+        right: 12px;
+        top: 36px;
+        cursor: pointer;
+        color: #777;
+    }
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.95;
+    }
+}
+
+/* Verify OTP Section -- Start */
+.verify-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.verify-card {
+  width: min(90%, 420px);
+  background: #fff;
+  border-radius: 14px;
+  padding: clamp(20px, 4vw, 35px);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* Phone Icon */
+.phone-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background: #eef4ff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* OTP BOX */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input {
+    width: 45px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+
+    &:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+    }
+  }
+}
+
+/* Resend */
+.resend {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+/* Button */
+.continue-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg,#2563eb,#1d4ed8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .otp-inputs input {
+    width: 40px;
+    height: 48px;
+  }
+
+}
+/* Verify OTP Section -- End */

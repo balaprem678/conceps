@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- Login Page -- Start -->
+    <div class="login-card" id="loginPage">
+        <h2>Sign in</h2>
+        <p class="signup-text">
+            Need an account?
+            <a href="#" onclick="showRegister()">Sign up</a>
+        </p>
+        <div class="social-login">
+            <button class="google">
+                <img src="./images/socialmedia_icon/google-logo.png" alt="google-logo">
+                Use Google
+            </button>
+            <button class="apple">
+                <img src="./images/socialmedia_icon/apple-logo.png" alt="apple-logo">
+                Use Apple
+            </button>
+        </div>
+        <div class="divider">
+            <span>OR</span>
+        </div>
+        <form>
+            <label>Email</label>
+            <input type="email" placeholder="email@email.com">
+            <div class="password-field">
+                <div class="password-label">
+                    <label>Password</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <input type="password" placeholder="Enter Password">
+                <span class="eye">👁</span>
+            </div>
+            <div class="remember">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div>
+
+            <button type="button" class="signin-btn" onclick="loginUser()">Sign In</button>
+        </form>
+    </div>
+    <!-- Login Page -- End -->
+
+    <!-- Register Page -- Start -->
+    <div class="login-card" id="registerPage" style="display:none;">
+        <h2>Sign up</h2>
+        <p class="signup-text">
+            Already have an account?
+            <a href="#" onclick="showLogin()">Sign in</a>
+        </p>
+        <div class="social-login">
+            <button class="google">
+                <img src="./images/socialmedia_icon/google-logo.png" alt="google-logo">
+                Use Google
+            </button>
+
+            <button class="apple">
+                <img src="./images/socialmedia_icon/apple-logo.png" alt="apple-logo">
+                Use Apple
+            </button>
+        </div>
+        <div class="divider">
+            <span>OR</span>
+        </div>
+        <form>
+            <label>Email</label>
+            <input type="email" placeholder="email@email.com">
+            <div class="password-field">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                <span class="eye">👁</span>
+            </div>
+            <div class="password-field">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm Password">
+                <span class="eye">👁</span>
+            </div>
+            <div class="remember">
+                <input type="checkbox">
+                <span>I accept <a href="">Terms & Conditions</a></span>
+            </div>
+            <button type="button" class="signin-btn" onclick="registerUser()">Sign In</button>
+        </form>
+
+    </div>
+    <!-- Register Page -- End -->
+
+    <!-- Verify OTP Section -- Start -->
+    <div class="verify-wrapper" id="otpPage" style="display:none;">
+        <div class="verify-card">
+            <img src="./images/socialmedia_icon/phone.png" alt="phone">
+
+            <h2>Verify your phone</h2>
+            <p class="sub-text">
+                Enter the verification code we sent to
+                <br><strong>******7859</strong>
+            </p>
+
+            <div class="otp-inputs">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+
+            <p class="resend">
+                Didn't receive a code? (37s)
+                <a href="#">Resend</a>
+            </p>
+            <a href="./dashboard.html" class="continue-btn" onclick="verifyOTP()" >Continue</a>
+        </div>
+    </div>
+    <!-- Verify OTP Section -- End -->
+    <script>
+        const loginPage = document.getElementById("loginPage");
+        const registerPage = document.getElementById("registerPage");
+        const otpPage = document.getElementById("otpPage");
+        const dashboardPage = document.getElementById("dashboardPage");
+
+        /* Show Pages */
+        function showLogin() {
+            loginPage.style.display = "block";
+            registerPage.style.display = "none";
+            otpPage.style.display = "none";
+        }
+
+        function showRegister() {
+            loginPage.style.display = "none";
+            registerPage.style.display = "block";
+        }
+
+        /* Register */
+        function registerUser() {
+            alert("Registered Successfully ✅");
+            registerPage.style.display = "none";
+            otpPage.style.display = "flex";
+        }
+
+        /* Login */
+        function loginUser() {
+            alert("Login Successful ✅");
+            otpPage.style.display = "flex";
+            loginPage.style.display = "none";
+        }
+
+        /* OTP Verify */
+        function verifyOTP() {
+            otpPage.style.display = "none";
+            dashboardPage.style.display = "block";
+        }
+    </script>
+
+
+</body>
+
+</html>
