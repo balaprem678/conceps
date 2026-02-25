@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-4 sec_head">
+        <div>
+            <h4 class="mb-0">List</h4>
+            <small class="text-muted">
+                Central Hub for Personal Customization
+            </small>
+        </div>
+
+        <button class="btn btn-outline-secondary btn-sm view-profile-btn">
+            View Profile
+        </button>
+    </div>
+    <div class="table-wrapper">
+
+        <!-- Header -->
+        <div class="table-header">
+            <h3>List</h3>
+            <div class="search_input">
+                <input type="text" placeholder="Search Teams">
+                <img src="./images/socialmedia_icon/icon_18.png" alt="icon">
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Number</th>
+                        <th>Location</th>
+                        <th>Address</th>
+                        <th>Currently working</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td data-label="No">01</td>
+                        <td data-label="Name">
+                            <b> Mani</b> <br>
+                            <small>mani123@gmail.com</small>
+                        </td>
+                        <td data-label="Department">
+                            <b>Product Management</b><br>
+                            <small>Product development</small>
+                        </td>
+                        <td data-label="Number">9874563211</td>
+                        <td data-label="Location">Coimbatore</td>
+                        <td data-label="Address">Sree Mahalakshmi Garden</td>
+                        <td data-label="Working">Yes</td>
+                        <td data-label="Experience">1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="table-footer">
+            <div>Show
+                <select name="per_page" id="per_page">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+                per page
+            </div>
+
+            <div class="pagination">
+                <span>←</span>
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>→</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
