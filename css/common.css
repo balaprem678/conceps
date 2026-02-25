@@ -128,3 +128,52 @@ iframe {
     height: 80vh;
     border: none;
 }
+
+
+.soon {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        right: -16px;
+        content: "Soon";
+        background-color: #F4F4F4;
+        color: #676A72;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+}
+
+.profile {
+    img {
+        width: 40px !important;
+    }
+
+    a {
+        display: none;
+        padding: 2px 10px;
+        border-radius: 8px;
+        color: #000;
+        position: absolute;
+        top: 36px;
+        right: 10px;
+        font-size: 14px;
+    }
+
+    &:hover {
+        a {
+            display: block;
+            padding: 2px 10px;
+            border-radius: 8px;
+            color: #000;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            background-color: #fff;
+        }
+    }
+}

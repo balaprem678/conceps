@@ -33,7 +33,8 @@ main {
 
 /* Register From -- Start */
 .register_section {
-
+    overflow-y: auto;
+    height: 85vh;
 
 
     .form-card {
